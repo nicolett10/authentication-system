@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { Context } from "../store/appContext";
 
-export const Demo = () => {
+export const Login = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
@@ -15,7 +15,7 @@ export const Demo = () => {
 							key={index}
 							className="list-group-item d-flex justify-content-between"
 							style={{ background: item.background }}>
-							<Link to={"/single/" + index}>
+							<Link to={"/private/" + index}>
 								<span>Link to: {item.title}</span>
 							</Link>
 							{// Conditional render example
@@ -39,3 +39,17 @@ export const Demo = () => {
 		</div>
 	);
 };
+
+// return (
+// <form>
+//   <div className="form-group">
+//     <label for="exampleInputEmail1">Email</label>
+//     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+//   </div>
+//   <div className="form-group">
+//     <label for="exampleInputPassword1">Password</label>
+//     <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>
+//   </div>
+//   <button type="submit" className="btn btn-primary">Submit</button>
+// </form>
+// );};
